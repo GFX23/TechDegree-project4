@@ -3,7 +3,7 @@
 
 Edited behavior:
 
-    - Win / Lose phrase:
+    - Win / Lose phrase - changing dynamicaly in JS:
         Win: `You Win! <br>You have missed ${this.missed} times!`
         Lose: `You Lost! <br> There was only ${document.querySelectorAll(".hide").length} more left!`
 
