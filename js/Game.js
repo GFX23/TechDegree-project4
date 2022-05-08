@@ -19,9 +19,9 @@ class Game {
         this.activePhrase = null
     }
 
-/* Starting game with hiding "overlay" and revealing game desk, also setting random Phrase
-    and rendering phrase letters to screen
-*/
+// Starting game with hiding "overlay" and revealing game desk, also setting random Phrase
+//    and rendering phrase letters to screen
+
     startGame() {
         document.querySelector("#overlay").style.display = "none"
         this.activePhrase = this.getRandomPhrase()
@@ -35,11 +35,11 @@ class Game {
         return this.phrases[randomNum]
     }
 
-/* Handling event - letter = passed letter from app.js
-    handling contains two options, which both will disable event button:
-        1) if letter doesnt match phrase, then setting "wrong" class and removing life count
-        2) if there is match, setting "chosen" class and checking for win
-*/
+// Handling event - letter = passed letter from app.js
+// handling contains two options, which both will disable event button:
+//      1) if letter doesnt match phrase, then setting "wrong" class and removing life count
+//      2) if there is match, setting "chosen" class and checking for win
+//
 
     handleInteraction(letter) {
         document.querySelectorAll(".key").forEach(key => {
