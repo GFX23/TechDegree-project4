@@ -8,7 +8,6 @@ class Phrase {
     }
 
 // Creating element for each "letter" in phrase, depending on char or space
-
     addPhraseToDisplay() {
         const ul = document.querySelector("ul")
         for (let i = 0; i < this.phrase.length; i++) {
@@ -27,13 +26,11 @@ class Phrase {
     }
 
 // Just checking if phrase includes passed letter
-
     checkLetter(letter) {
         return this.phrase.toLowerCase().includes(letter)
     }
 
 // After succesfull match, will set element class to "show", while removing "hide" class , passed "letter" is innerHMTL of "key" element
-
     showMatchedLetter(letter) {
         const phraseLetters = document.querySelectorAll(".letter")
         phraseLetters.forEach(pLetter => {
