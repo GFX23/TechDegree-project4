@@ -21,7 +21,6 @@ class Game {
 
 // Starting game with hiding "overlay" and revealing game desk, also setting random Phrase
 //    and rendering phrase letters to screen
-
     startGame() {
         document.querySelector("#overlay").style.display = "none"
         this.activePhrase = this.getRandomPhrase()
@@ -29,7 +28,6 @@ class Game {
     }
 
 // Just random selecting of phrase
-
     getRandomPhrase() {
         const randomNum = Math.floor(Math.random() * this.phrases.length)
         return this.phrases[randomNum]
@@ -40,7 +38,6 @@ class Game {
 //      1) if letter doesnt match phrase, then setting "wrong" class and removing life count
 //      2) if there is match, setting "chosen" class and checking for win
 //
-
     handleInteraction(letter) {
         document.querySelectorAll(".key").forEach(key => {
             if (key.innerHTML === letter) {
@@ -85,6 +82,8 @@ class Game {
     gameOver() {
         document.querySelector("#overlay").style.display = ""
         document.querySelector("#overlay").classList.remove("start")
+        document.querySelector("#overlay").classList.remove("win")
+        document.querySelector("#overlay").classList.remove("lose")
         if (this.checkForWin()) {
             document.querySelector("#game-over-message").innerHTML = `You Win! <br>You have missed ${this.missed} times!` 
             document.querySelector("#overlay").classList.add("win")
